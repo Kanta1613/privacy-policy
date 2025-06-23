@@ -6,7 +6,15 @@
 </head>
 <body>
   <h1>プライバシーポリシー</h1>
-  <p>これはeBay認証用のプライバシーポリシーです。</p>
   <p>これはeBay認証およびAgoraサービス利用のためのプライバシーポリシーです。</p>
+
+  <h2>認証コードをここに表示します</h2>
+  <div id="code-area"></div>
+
+  <script>
+    const code = new URLSearchParams(window.location.search).get("code");
+    const div = document.getElementById("code-area");
+    div.innerHTML = code ? `<p>${code}</p>` : "<p>コードがありません</p>";
+  </script>
 </body>
 </html>
